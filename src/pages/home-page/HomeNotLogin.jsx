@@ -1,9 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 
-import SlideImageComponent from "../../components/cart/home-page-components/SlideImageComponent";
 import CategoryLocation from "../../components/cart/home-page-components/CategoryLocation";
 import HeroSection from "../../components/cart/home-page-components/HeroSection";
 import HomeProfile from "../../components/cart/home-page-components/HomeProfile";
@@ -16,6 +14,7 @@ import { fetchServices } from "../../redux/feature/service/serviceSlice";
 import { fetchServiceReviews } from "../../redux/feature/review/reviewSlice";
 import { Metadata } from '../../lib/Metadata';
 import DropdownCategory from "../../components/button/DropdownCategory";
+import SlideImageComponent from "../../components/cart/home-page-components/SlideImageComponent";
 
 export function HomeNotLogin() {
   const dispatch = useDispatch();
@@ -115,7 +114,7 @@ export function HomeNotLogin() {
         <p className="text-2xl ">{t("Welcome_Services")}</p>
       </div>
       <DropdownCategory />
-      <SlideImageComponent />
+      <SlideImageComponent/>
 
       <div className="flex px-24 justify-center mt-[80px] text-[#022278] dark:text-Secondary text-xl font-semibold">
         <div className="w-full max-w-[1286px] px-4 max-[490px]:-ml-20 max-[490px]:-mb-[80px] max-[405px]:-ml-[110px] max-[360px]:-ml-[140px] max-[320px]:-ml-[190px]">
